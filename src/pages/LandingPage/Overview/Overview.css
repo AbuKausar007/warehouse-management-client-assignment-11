@@ -1,0 +1,22 @@
+.overview {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 25px;
+}
+.overview h3{
+    font-weight: 600;
+}
+
+
+/* mobile response */
+@media only screen and (max-width: 576px){
+    .overview {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 20px;
+}
+    .overview h3{
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
