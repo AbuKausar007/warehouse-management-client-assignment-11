@@ -1,0 +1,14 @@
+.sixItems {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 2rem;
+}
+
+/* responsive for mobile device */
+@media only screen and (max-width: 576px){
+    .sixItems {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-row-gap: 2rem;
+}
+}

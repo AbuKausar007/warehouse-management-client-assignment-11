@@ -1,0 +1,110 @@
+[
+    {
+        "_id": 1,
+        "name": "Strawberry",
+        "price": "150",
+        "description": "Strawberries are soft, sweet, bright red berries. Strawberries have tiny edible seeds. When ripe, strawberries smell wonderful.",
+        "img": "https://i.ibb.co/mbkFqgs/strawberry.jpg",
+        "quantity": "100",
+        "supplier": "Arif Rahman"
+    },
+    {
+        "_id": 2,
+        "name": "Chicken",
+        "price": "300",
+        "description": "Chicken meat is known by its nutritional quality, as it contains significant amount of high-quality and easily digestible protein.",
+        "img": "https://i.ibb.co/Fbt5Lr4/chicken.jpg",
+        "quantity": "200",
+        "supplier": "Tayeb Tushar"
+    },
+    {
+        "_id": 3,
+        "name": "Butterfish",
+        "price": "400",
+        "description": "The butterfish is a small, round fish distinguishable by its thin, deep body and lack of pelvic or ventral fins. It has soft-rayed dorsal.",
+        "img": "https://i.ibb.co/s5Bycdm/butterfish.jpg",
+        "quantity": "300",
+        "supplier": "Naim Hossain"
+    },
+    {
+        "_id": 4,
+        "name": "Orange",
+        "price": "180",
+        "description": "The orange is a usually round or oval citrus; its rind and flesh are generally orange. It's edible part is consumed in fresh or in juice.",
+        "img": "https://i.ibb.co/DbKB0QH/orange.jpg",
+        "quantity": "250",
+        "supplier": "Tanveer Nur"
+    },
+    {
+        "_id": 5,
+        "name": "Lamb Leg",
+        "price": "1000",
+        "description": "Only the two hind legs produce the cut referred to as 'leg of lamb'. It is a large, lean, and tender cut and can be used whole or subdivided.",
+        "img": "https://i.ibb.co/85wdkDm/lambLeg.jpg",
+        "quantity": "600",
+        "supplier": "Munshi Shakib"
+    },
+    {
+        "_id": 6,
+        "name": "Nuts",
+        "price": "800",
+        "description": "Nuts are actually dry fruits. Single-seeded fruits that have high oil content. They are usually enclosed in a leathery or solid outer layer.",
+        "img": "https://i.ibb.co/d6SVMwm/nuts.jpg",
+        "quantity": "800",
+        "supplier": "Faysal Shourov"
+    },
+    {
+        "_id": 7,
+        "name": "Beef Steak",
+        "price": "700",
+        "description": "A beefsteak, often called just steak, is a flat cut of beef with parallel faces, usually cut perpendicular to the muscle fibers.",
+        "img": "https://i.ibb.co/Kx73TTm/beef-Steak.jpg",
+        "quantity": "500",
+        "supplier": "Ishteyak Ifty"
+    },
+    {
+        "_id": 8,
+        "name": "Broccoli",
+        "price": "80",
+        "description": "Broccoli is a fast-growing annual plant. Upright and branching with leathery leaves, broccoli bears dense green clusters of flower buds.",
+        "img": "https://i.ibb.co/K5kx56q/broccoli.jpg",
+        "quantity": "100",
+        "supplier": "Mehedi Pial"
+    },
+    {
+        "_id": 9,
+        "name": "Cookies",
+        "price": "250",
+        "description": "A cookie is a baked or cooked snack or dessert that is typically small, flat and sweet. It contains flour, sugar, egg, oil, butter.",
+        "img": "https://i.ibb.co/rt6cpmR/cookies.jpg",
+        "quantity": "260",
+        "supplier": "Farabi Ahmed"
+    },
+    {
+        "_id": 10,
+        "name": "Dates",
+        "price": "290",
+        "description": "Dates are small, sweet fruits that grow in date palm trees. Dried dates have a very high amount of sugar of their total weight.",
+        "img": "https://i.ibb.co/bB63p9W/dates.jpg",
+        "quantity": "350",
+        "supplier": "Saymon Shariyar"
+    },
+    {
+        "_id": 11,
+        "name": "Sea Bass",
+        "price": "360",
+        "description": "Sea bass are rather perchlike fish. Generally elongated body has small scales, the mouth is large, and the tail is straight-edged or rounded.",
+        "img": "https://i.ibb.co/K67MZkY/seabass.jpg",
+        "quantity": "480",
+        "supplier": "Ohidujjaman Ove"
+    },
+    {
+        "_id": 12,
+        "name": "Shripms",
+        "price": "850",
+        "description": "Shrimp are characterized by a semitransparent body flattened from side to side and a flexible abdomen terminating in a fanlike tail.",
+        "img": "https://i.ibb.co/fGGjfMD/shrimps.jpg",
+        "quantity": "950",
+        "supplier": "Abdullah Noman"
+    }
+]
