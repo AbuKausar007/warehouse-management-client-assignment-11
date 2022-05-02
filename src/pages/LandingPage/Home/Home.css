@@ -1,0 +1,52 @@
+.img {
+    background-image: url('../../../images/banner3.jpg');
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.banner-area {
+    position: relative;
+}
+.banner-text {
+    position: absolute;
+    color: #18300d;
+    top: 20%;
+    left: 8%;
+}
+.banner-text .red{
+    color: #c6473d;
+}
+.banner-text .yellow {
+    color: #f5c129;
+}
+
+/* responsive for mobile device */
+@media  only screen and (max-width: 576px){
+    .img {
+    background-image: url('../../../images/banner3.jpg');
+   height: 300px;
+   width: auto;
+}
+.heading {
+    font-size: 16px;
+}
+.banner-text h1 {
+    font-size: 28px;
+    padding-bottom: 0;
+}
+.banner-text h4 {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+.small {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.small button {
+    margin-top: 3px;
+   font-size:small;
+}
+}

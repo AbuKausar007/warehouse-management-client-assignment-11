@@ -1,50 +1,30 @@
 import React from "react";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div>
-      <nav className=" navbar navbar-expand-lg navbar-light bg-light">
-        <div className="container">
-          <Link className="navbar-brand" to="/">
-            Fresh Grocery
-          </Link>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarText"
-            aria-controls="navbarText"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarText">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">
-                  Home
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/inventory">
-                  Inventory
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="#">
-                  Pricing
-                </Link>
-              </li>
-            </ul>
-            <span className="navbar-text">
-              <Link className="nav-link" to="/login">
+      <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+        <Container>
+          <Navbar.Brand as={Link} to="/" href="#home">
+            React-Bootstrap
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link as={Link} to="/inventory" href="inevtory">
+                Inventory
+              </Nav.Link>
+              <Nav.Link href="#pricing">Pricing</Nav.Link>
+            </Nav>
+            <Nav>
+              <Nav.Link as={Link} to="/login" href="#login">
                 Login
-              </Link>
-            </span>
-          </div>
-        </div>
-      </nav>
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </div>
   );
 };
