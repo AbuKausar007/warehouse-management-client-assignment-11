@@ -4,8 +4,8 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <div className="footer">
-      <section className=" container d-flex justify-content-around pt-5">
-        <div className="text-start">
+      <section className=" container d-lg-flex flex-lg-row justify-content-lg-around d-sm-flex flex-sm-column align-items-sm-center align-content-sm-center w-100 pt-5">
+        <div className="text-lg-start text-sm-center small-device">
           <h3 className="fw-bold">Store Location</h3>
           <h5 className="fw-bold text-danger">Address:</h5>
           <p className="text-success">Rayerbag, Jatrabari, Dhaka - 1362</p>
@@ -14,7 +14,7 @@ const Footer = () => {
           <h5 className="fw-bold text-danger">Phone:</h5>
           <p className="text-success">01755332299</p>
         </div>
-        <div className="text-start">
+        <div className="text-lg-start text-sm-center small-device">
           <h3 className="fw-bold">Useful links</h3>
           <p className=" text-success">Home</p>
           <p className=" text-success">About Us</p>
@@ -22,7 +22,7 @@ const Footer = () => {
           <p className=" text-success">My Items</p>
           <p className=" text-success">Manage Items</p>
         </div>
-        <div className="text-start">
+        <div className="text-lg-start text-sm-center small-device">
           <h3 className="fw-bold">Categories</h3>
           <p className="text-success">Vegetables</p>
           <p className="text-success">Fish</p>
@@ -30,7 +30,7 @@ const Footer = () => {
           <p className="text-success">Dry Fruits</p>
           <p className="text-success">Cookies</p>
         </div>
-        <div className="text-start">
+        <div className="text-lg-start text-sm-center small-device">
           <h3 className="fw-bold">Opering hours</h3>
           <h5 className="fw-bold text-danger">Sunday - Tuesday</h5>
           <p className="text-success">9:00 - 14:00</p>
