@@ -14,7 +14,7 @@ const Footer = () => {
           <h5 className="fw-bold text-danger">Phone:</h5>
           <p className="text-success">01755332299</p>
         </div>
-        <div className="text-lg-start text-sm-center small-device">
+        <div className="text-lg-start text-sm-center small-device d-none d-lg-block">
           <h3 className="fw-bold">Useful links</h3>
           <p className=" text-success">Home</p>
           <p className=" text-success">About Us</p>
@@ -22,7 +22,7 @@ const Footer = () => {
           <p className=" text-success">My Items</p>
           <p className=" text-success">Manage Items</p>
         </div>
-        <div className="text-lg-start text-sm-center small-device">
+        <div className="text-lg-start text-sm-center small-device d-none d-lg-block">
           <h3 className="fw-bold">Categories</h3>
           <p className="text-success">Vegetables</p>
           <p className="text-success">Fish</p>
