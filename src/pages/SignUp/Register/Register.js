@@ -42,7 +42,7 @@ const Register = () => {
   };
 
   return (
-    <div className="register-form shadow-lg rounded-3 mt-3 p-3">
+    <div className="register-form shadow-lg rounded-3 mt-lg-3 mt-sm-5 py-5 px-3 ">
       <h2 className=" text-center fw-bold text-success py-2">
         Please Register
       </h2>

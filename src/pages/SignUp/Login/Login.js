@@ -9,6 +9,7 @@ import { toast, ToastContainer } from "react-toastify";
 import auth from "../../../Firebase/firebase.init";
 import Loading from "../../Shared/Loading/Loading";
 import SocialLogin from "../SocialLogin/SocialLogin";
+import "./Login.css";
 
 const Login = () => {
   const emailRef = useRef("");
@@ -58,7 +59,7 @@ const Login = () => {
   };
 
   return (
-    <div className="container w-50 mx-auto shadow-lg rounded-3 mt-3 p-3">
+    <div className="login-form container shadow-lg rounded-3 mt-lg-3 mt-sm-5 py-5 px-3">
       <h2 className="text-success fw-bold text-center py-2">Please Login</h2>
       <Form onSubmit={handleSubmit}>
         <Form.Group className="mb-3" controlId="formBasicEmail">
