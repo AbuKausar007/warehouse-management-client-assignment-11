@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   useCreateUserWithEmailAndPassword,
   useUpdateProfile,
@@ -11,11 +11,13 @@ import auth from "../../../Firebase/firebase.init";
 import SocialLogin from "../SocialLogin/SocialLogin";
 
 const Register = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  let from = location.state?.from?.pathname || "/";
+
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
-
-  const navigate = useNavigate();
 
   const navigateLogin = () => {
     navigate("/login");
@@ -26,7 +28,7 @@ const Register = () => {
   }
 
   if (user) {
-    console.log("user", user);
+    navigate(from, { replace: true });
   }
 
   const handleRegister = async (event) => {
@@ -38,7 +40,7 @@ const Register = () => {
     await createUserWithEmailAndPassword(email, password);
     await updateProfile({ displayName: name });
     console.log("Updated profile");
-    navigate("/");
+    // navigate("/");
   };
 
   return (

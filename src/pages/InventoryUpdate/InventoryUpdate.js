@@ -1,16 +1,11 @@
 import React from "react";
-import { ListGroup, ListGroupItem } from "react-bootstrap";
-import Card from "react-bootstrap/Card";
-import { useNavigate } from "react-router-dom";
+import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
 
-const SingleInventory = ({ item }) => {
-  const { _id, name, price, img, quantity, description, supplier } = item;
-  const navigate = useNavigate();
-  const navigateToStockUpdate = (id) => {
-    navigate(`/inventory/${id}`);
-  };
+const InventoryUpdate = (item) => {
+  const { name, price, img, quantity, description, supplier } = item;
   return (
     <div>
+      <h1>inventory update</h1>
       <Card className="w-75 d-block mx-auto">
         <Card.Img className="img-fluid " variant="top" src={img} />
         <Card.Body>
@@ -31,16 +26,11 @@ const SingleInventory = ({ item }) => {
           </ListGroupItem>
         </ListGroup>
         <Card.Body>
-          <button
-            onClick={() => navigateToStockUpdate(_id)}
-            className="btn btn-danger"
-          >
-            Stock Update
-          </button>
+          <button className="btn btn-warning">Deliverd</button>
         </Card.Body>
       </Card>
     </div>
   );
 };
 
-export default SingleInventory;
+export default InventoryUpdate;
