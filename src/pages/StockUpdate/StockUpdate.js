@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 const StockUpdate = () => {
   const { id } = useParams();
   const [inventory, setInventory] = useState({});
+  const [isReload, setIsReload] = useState(false);
 
   useEffect(() => {
     const url = `http://localhost:5000/inventories/${id}`;
@@ -12,7 +13,35 @@ const StockUpdate = () => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => setInventory(data));
-  }, []);
+  }, [isReload]);
+
+  const handleAddQuantity = (event) => {
+    event.preventDefault();
+    const quantity = event.target.quantity.value;
+    const newQuantity = parseInt(quantity) + parseInt(inventory?.quantity);
+    console.log(newQuantity);
+    const updateItem = { newQuantity };
+    if (!quantity) {
+      alert("Please enter quantity number.");
+    } else {
+      const url = `http://localhost:5000/inventories/${id}`;
+
+      fetch(url, {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(updateItem),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          // setInventory(data);
+          setIsReload(!isReload);
+          event.target.reset();
+        });
+    }
+  };
+  const handleDelivered = (id) => {};
   return (
     <div className="container d-grid mt-5 pt-3 pb-5">
       <h1 className="fw-bold text-success pb-2">
@@ -42,12 +71,25 @@ const StockUpdate = () => {
               </ListGroupItem>
             </ListGroup>
             <Card.Body>
-              <button className="btn btn-warning">Deliverd</button>
+              <button
+                onClick={() => handleDelivered(id)}
+                className="btn btn-warning"
+              >
+                Deliverd
+              </button>
             </Card.Body>
           </Card>
         </div>
         <div className="col-lg-6 col-sm-12">
-          <h1>tmi</h1>
+          <form onSubmit={handleAddQuantity}>
+            <input
+              type="number"
+              name="quantity"
+              placeholder="Enter quantity amount"
+              required
+            />
+            <input type="submit" value="Add Quantity" />
+          </form>
         </div>
       </section>
     </div>
