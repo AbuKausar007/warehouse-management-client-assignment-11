@@ -1,11 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { Card, ListGroup, ListGroupItem } from "react-bootstrap";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const StockUpdate = () => {
   const { id } = useParams();
   const [inventory, setInventory] = useState({});
   const [isReload, setIsReload] = useState(false);
+
+  const navigate = useNavigate();
+  const manageInventories = () => {
+    navigate("/manageInventories");
+  };
 
   useEffect(() => {
     const url = `http://localhost:5000/inventories/${id}`;
@@ -41,7 +46,28 @@ const StockUpdate = () => {
         });
     }
   };
-  const handleDelivered = (id) => {};
+
+  /*const handleDelivered = () => {
+    let { quantity } = inventory;
+    if (quantity > 0) {
+      quantity = quantity - 1;
+      const updateQuantity = { quantity };
+      const url = `http://localhost:5000/inventories/${id}`;
+      fetch(url, {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(updateQuantity),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          setIsReload(!isReload);
+        });
+    }
+  }; */
+
   return (
     <div className="container d-grid mt-5 pt-3 pb-5">
       <h1 className="fw-bold text-success pb-2">
@@ -71,25 +97,41 @@ const StockUpdate = () => {
               </ListGroupItem>
             </ListGroup>
             <Card.Body>
-              <button
-                onClick={() => handleDelivered(id)}
-                className="btn btn-warning"
-              >
-                Deliverd
-              </button>
+              <button className="btn btn-warning">Deliverd</button>
             </Card.Body>
           </Card>
         </div>
-        <div className="col-lg-6 col-sm-12">
+        <div className="col-lg-6 col-sm-12 ">
+          <h3 className="fw-bold pt-5">You can increase your quantity here!</h3>
           <form onSubmit={handleAddQuantity}>
             <input
               type="number"
               name="quantity"
               placeholder="Enter quantity amount"
               required
+              style={{
+                height: "40px",
+                width: "100%",
+                fontSize: "18px",
+                borderRadius: "7px",
+                border: "2px solid green",
+                margin: "10px",
+              }}
+            />{" "}
+            <br />
+            <input
+              type="submit"
+              value="Add Quantity"
+              className=" mb-2 bg-success text-white py-2 px-3 rounded-3"
             />
-            <input type="submit" value="Add Quantity" />
           </form>
+          <h3 className="fw-bold pt-5 pb-2">You Can Go To Manage Inventory!</h3>
+          <button
+            onClick={manageInventories}
+            className=" text-decoration-none btn btn-success fw-bold border-4 rounded-3 shadow-lg w-50"
+          >
+            Manage Inventories
+          </button>
         </div>
       </section>
     </div>

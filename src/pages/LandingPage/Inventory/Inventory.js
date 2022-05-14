@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import useInventory from "../../hooks/useInventory/useInventory";
 import SingleInventory from "../SingleInventory/SingleInventory";
 import "./Inventory.css";
@@ -18,6 +19,12 @@ const Inventory = () => {
           ))}
         </div>
       </section>
+      <Link
+        to="manageInventories"
+        className=" text-decoration-none btn btn-success fw-bold border-4 rounded-3 shadow-lg w-25"
+      >
+        Manage Inventories
+      </Link>
     </div>
   );
 };

@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/LandingPage/Home/Home";
 import Inventory from "./pages/LandingPage/Inventory/Inventory";
+import ManageInventories from "./pages/ManageInventories/ManageInventories";
 import Header from "./pages/Shared/Header/Header";
 import Login from "./pages/SignUp/Login/Login";
 import Register from "./pages/SignUp/Register/Register";
@@ -24,6 +25,10 @@ function App() {
               <StockUpdate></StockUpdate>
             </RequireAuth>
           }
+        ></Route>
+        <Route
+          path="/manageInventories"
+          element={<ManageInventories></ManageInventories>}
         ></Route>
       </Routes>
     </div>
