@@ -3,7 +3,6 @@ import "./App.css";
 import AddInventory from "./pages/AddInventory/AddInventory";
 import Blogs from "./pages/Blogs/Blogs";
 import Home from "./pages/LandingPage/Home/Home";
-import Inventory from "./pages/LandingPage/Inventory/Inventory";
 import ManageInventories from "./pages/ManageInventories/ManageInventories";
 import NotFound from "./pages/NotFound/NotFound";
 import Header from "./pages/Shared/Header/Header";
