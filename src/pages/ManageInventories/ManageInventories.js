@@ -1,6 +1,7 @@
 import React from "react";
 import useInventory from "../hooks/useInventory/useInventory";
 import Table from "react-bootstrap/Table";
+import { useNavigate } from "react-router-dom";
 
 const ManageInventories = () => {
   const { items, setItems } = useInventory();
@@ -19,10 +20,24 @@ const ManageInventories = () => {
         });
     }
   };
+
+  const navigate = useNavigate();
+  const handleAddInventory = () => {
+    navigate("/addInventory");
+  };
   return (
-    <div className="py-5 mt-3">
+    <div className="container py-5 mt-3">
       <h1 className="fw-bold text-success">Manage All Inventories</h1>
-      <section>
+      <div className=" py-2 mb-2 border-3 rounded-3 shadow-lg">
+        <span className="p-3 fw-bold text-danger ">Wanna add new item?</span>
+        <button
+          onClick={handleAddInventory}
+          className="btn btn-success fw-bold"
+        >
+          Add Now!
+        </button>
+      </div>
+      <section className="">
         {items.map((item) => (
           <div key={item._id}>
             <Table striped bordered hover>
