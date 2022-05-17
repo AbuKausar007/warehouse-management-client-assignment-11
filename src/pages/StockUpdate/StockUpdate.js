@@ -13,7 +13,7 @@ const StockUpdate = () => {
   };
 
   useEffect(() => {
-    const url = `http://localhost:5000/inventories/${id}`;
+    const url = `https://thawing-lowlands-43220.herokuapp.com/inventories/${id}`;
 
     fetch(url)
       .then((res) => res.json())
@@ -29,7 +29,7 @@ const StockUpdate = () => {
     if (!quantity) {
       alert("Please enter quantity number.");
     } else {
-      const url = `http://localhost:5000/inventories/${id}`;
+      const url = `https://thawing-lowlands-43220.herokuapp.com/inventories/${id}`;
 
       fetch(url, {
         method: "PUT",
@@ -52,7 +52,7 @@ const StockUpdate = () => {
     if (quantity > 0) {
       quantity = quantity - 1;
       const updateQuantity = { quantity };
-      const url = `http://localhost:5000/inventories/${id}`;
+      const url = `https://thawing-lowlands-43220.herokuapp.com/inventories/${id}`;
       fetch(url, {
         method: "PUT",
         headers: {

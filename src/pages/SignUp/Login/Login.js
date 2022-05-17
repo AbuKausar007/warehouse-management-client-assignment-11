@@ -43,7 +43,10 @@ const Login = () => {
     const password = passwordRef.current.value;
 
     await signInWithEmailAndPassword(email, password);
-    const { data } = await axios.post("http://localhost:5000/login", { email });
+    const { data } = await axios.post(
+      "https://thawing-lowlands-43220.herokuapp.com/login",
+      { email }
+    );
     console.log(data);
     localStorage.setItem("accessToken", data.accessToken);
     navigate(from, { replace: true });
@@ -96,7 +99,7 @@ const Login = () => {
           onClick={navigateRegister}
         >
           Please Register
-        </Link>{" "}
+        </Link>
       </p>
       <p>
         Forget Password?{" "}
@@ -105,7 +108,7 @@ const Login = () => {
           onClick={resetPassword}
         >
           Reset Password
-        </button>{" "}
+        </button>
       </p>
       <SocialLogin></SocialLogin>
       <ToastContainer />

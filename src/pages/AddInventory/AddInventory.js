@@ -1,12 +1,15 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import "./AddInventory.css";
 
 const AddInventory = () => {
+  const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
+
   const onSubmit = (data) => {
     console.log(data);
-    const url = `http://localhost:5000/inventories`;
+    const url = `https://thawing-lowlands-43220.herokuapp.com/inventories`;
     fetch(url, {
       method: "POST",
       headers: {
@@ -18,6 +21,7 @@ const AddInventory = () => {
       .then((result) => {
         console.log(result);
         alert("New item added successfully!");
+        navigate("/manageInventories");
       });
   };
   return (
